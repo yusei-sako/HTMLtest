@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html Lang="ja"> <!-- 日本語設定 -->
+  <head>
+    <meta charset="utf8">
+    <title>はじめてのHTML</title>
+  </head>
+  <body>
+
+<!--
+ol (ordered list) / ul (unordered list) / li (list item)
+dl (definition list) / dt (definition term) / dd (definition description)
+strong: 重要なところ(太文字)
+br: 改行
+span
+a: リンク付け
+img: 画像付け
+table
+thead
+tbody
+tr: table row
+th: table header
+td: table data
+form
+  action: 入力されたデータをどこに送るか？　サーバーなどphp
+  method: get / post
+input
+  text
+  submit
+  password
+  hidden
+  checkbox
+  ragio
+  email
+  number
+  date
+textarea
+button
+label
+select
+option
+-->
+
+    <article>
+      <h1>おいしいごはん</h1>
+      <p>至高の<br><strong>TKG</strong> → <a href="index.html" target="_blank">こんにちは</a> → <a href="#stuf">材料に</a></p>
+      <h2 id="stuf">材料</h2>
+      <ul>
+        <li><span style="color:gold;">卵</span></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%86%A4%E6%B2%B9">しょうゆ</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%A3%AF" target="_blank">ごはん</a></li>
+        <p><img src="image1.jpg" width="150" height="150" alt="参考画像"></p>
+      </ul>
+      <h2>手順</h2>
+      <ol>
+        <li>まぜる</li>
+        <li>かける</li>
+      </ol>
+      <h2>定義</h2>
+      <dl>
+        <dt>TKG</dt>
+        <dd>TAMAGO KAKE GOHAN</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Size</th><th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>S</td><td>150</td>
+          </tr>
+          <tr>
+            <td>M</td><td>180</td>
+          </tr>
+          <tr>
+            <td>L</td><td>210</td>
+          </tr>
+          <tr>
+            <td colspan="2">free for kids!</td> <!-- 列を横に2つ結合 -->
+          </tr>
+        </tbody>
+      </table>
+      <h1>アンケート</h1>
+        <form action="なんたら.php" method="post">
+          <p>メールアドレス： <input type="text" name="email" size="50" maxlength="20" placeholder="ここにメールアドレスを入力" required></p>
+          <p>メールアドレス： <input type="email" name="email" size="50" maxlength="20" placeholder="ここにメールアドレスを入力"></p>
+          <p>料金： <input type="number" name="price"></p>
+          <p>誕生日： <input type="date" name="birthday"></p>
+          <p>パスワード： <input type="password" name="password">
+                                <input type="hidden" name="user_id" value="12345">
+          </p>
+          <p>コメント：<textarea name="comment" cols="40" rows="5"></textarea></p>
+          <p>Phone：
+              <label><input type="checkbox" name="phone" value="android" checked>Android</label>
+              <input type="checkbox" name="phone" value="iphone" id="iphone"><label for="iphone">iPhone</label>
+          </p>
+          <p>Color：
+              <input type="radio" name="color" value="red" checked>Red
+              <input type="radio" name="color" value="blue" checked>Blue
+          </p>
+          <p>City：
+            <select name="city">
+              <option value="tokyo">Tokyo</option>
+              <option value="osaka" selected>Osaka</option>
+              <option value="hukuoka">Hukuoka</option>
+            <select>
+          </p>
+          <p>City：
+            <select name="city" multiple size="2">
+              <option value="tokyo">Tokyo</option>
+              <option value="osaka" selected>Osaka</option>
+              <option value="hukuoka">Hukuoka</option>
+            <select>
+          </p>
+          <p>
+              <input type="submit" value="送信">
+              <button type="submit"><strong>送信</strong></button>
+              <button type="button">処理をする</button>
+          </p>
+        </form>
+    </article>
+  </body>
+</html>
